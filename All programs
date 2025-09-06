@@ -1,0 +1,244 @@
+#include <stdio.h>
+
+// Program 1: Print first 10 natural numbers
+void prog1() {
+    for(int i=1;i<=10;i++) printf("%d ",i);
+}
+
+// Program 2: Print first 10 odd numbers
+void prog2() {
+    int count=0, i=1;
+    while(count<10) {
+        if(i%2!=0) { printf("%d ",i); count++; }
+        i++;
+    }
+}
+
+// Program 3: Print first 10 even numbers
+void prog3() {
+    int count=0, i=1;
+    while(count<10) {
+        if(i%2==0) { printf("%d ",i); count++; }
+        i++;
+    }
+}
+
+// Program 4: Print first n natural numbers
+void prog4() {
+    int n; printf("Enter n: "); scanf("%d",&n);
+    for(int i=1;i<=n;i++) printf("%d ",i);
+}
+
+// Program 5: Print first n odd numbers
+void prog5() {
+    int n,count=0,i=1; printf("Enter n: "); scanf("%d",&n);
+    while(count<n) {
+        if(i%2!=0) { printf("%d ",i); count++; }
+        i++;
+    }
+}
+
+// Program 6: Print first n even numbers
+void prog6() {
+    int n,count=0,i=1; printf("Enter n: "); scanf("%d",&n);
+    while(count<n) {
+        if(i%2==0) { printf("%d ",i); count++; }
+        i++;
+    }
+}
+
+// Program 7: Print sum of n natural numbers
+void prog7() {
+    int n,sum=0; printf("Enter n: "); scanf("%d",&n);
+    for(int i=1;i<=n;i++) sum+=i;
+    printf("Sum = %d",sum);
+}
+
+// Program 8: Print sum of first n odd numbers
+void prog8() {
+    int n,sum=0,count=0,i=1; printf("Enter n: "); scanf("%d",&n);
+    while(count<n) {
+        if(i%2!=0) { sum+=i; count++; }
+        i++;
+    }
+    printf("Sum = %d",sum);
+}
+
+// Program 9: Print sum of first n even numbers
+void prog9() {
+    int n,sum=0,count=0,i=1; printf("Enter n: "); scanf("%d",&n);
+    while(count<n) {
+        if(i%2==0) { sum+=i; count++; }
+        i++;
+    }
+    printf("Sum = %d",sum);
+}
+
+// Program 10: Factorial of a number
+void prog10() {
+    int n,fact=1; printf("Enter n: "); scanf("%d",&n);
+    for(int i=1;i<=n;i++) fact*=i;
+    printf("Factorial = %d",fact);
+}
+
+// Program 11: Print your name 5 times
+void prog11() {
+    for(int i=1;i<=5;i++) printf("Zenil\n");
+}
+
+// Program 12: Print your name n times
+void prog12() {
+    int n; printf("Enter n: "); scanf("%d",&n);
+    for(int i=1;i<=n;i++) printf("Zenil\n");
+}
+
+// Program 13: Sum of all numbers divisible by 13 in range 1-100
+void prog13() {
+    int sum=0;
+    for(int i=1;i<=100;i++) if(i%13==0) sum+=i;
+    printf("Sum = %d",sum);
+}
+
+// Program 14: Calculate sum and mean of any 10 values
+void prog14() {
+    int arr[10],sum=0;
+    for(int i=0;i<10;i++) { scanf("%d",&arr[i]); sum+=arr[i]; }
+    printf("Sum=%d Mean=%.2f",sum,sum/10.0);
+}
+
+// Program 15: Calculate sum and mean of any n values
+void prog15() {
+    int n; printf("Enter n: "); scanf("%d",&n);
+    int arr[n],sum=0;
+    for(int i=0;i<n;i++) { scanf("%d",&arr[i]); sum+=arr[i]; }
+    printf("Sum=%d Mean=%.2f",sum,sum/(float)n);
+}
+
+// Program 16: Find largest and smallest out of 100 numbers
+void prog16() {
+    int arr[100];
+    for(int i=0;i<100;i++) scanf("%d",&arr[i]);
+    int max=arr[0],min=arr[0];
+    for(int i=1;i<100;i++) {
+        if(arr[i]>max) max=arr[i];
+        if(arr[i]<min) min=arr[i];
+    }
+    printf("Max=%d Min=%d",max,min);
+}
+
+// Program 17: Count +ve and -ve and zeroes in 200 values
+void prog17() {
+    int arr[200],p=0,n=0,z=0;
+    for(int i=0;i<200;i++) scanf("%d",&arr[i]);
+    for(int i=0;i<200;i++) {
+        if(arr[i]>0) p++; else if(arr[i]<0) n++; else z++;
+    }
+    printf("Positive=%d Negative=%d Zeroes=%d",p,n,z);
+}
+
+// Program 18: Count boys and girls in class of 50
+void prog18() {
+    int b=0,g=0;
+    for(int i=1;i<=50;i++) {
+        char c; scanf(" %c",&c);
+        if(c=='B' || c=='b') b++; else g++;
+    }
+    printf("Boys=%d Girls=%d",b,g);
+}
+
+// Program 19: Print numbers divisible by 5 from 1-100
+void prog19() {
+    for(int i=1;i<=100;i++) if(i%5==0) printf("%d ",i);
+}
+
+// Program 20: Print numbers divisible by 3 from 1-100
+void prog20() {
+    for(int i=1;i<=100;i++) if(i%3==0) printf("%d ",i);
+}
+
+// Program 21: Separate digits of a given number
+void prog21() {
+    int n; printf("Enter n: "); scanf("%d",&n);
+    while(n>0) { printf("%d ",n%10); n/=10; }
+}
+
+// Program 22: Count digits in a given number
+void prog22() {
+    int n,count=0; printf("Enter n: "); scanf("%d",&n);
+    while(n>0) { count++; n/=10; }
+    printf("Digits=%d",count);
+}
+
+// Program 23: Summation of digits of a given number
+void prog23() {
+    int n,sum=0; printf("Enter n: "); scanf("%d",&n);
+    while(n>0) { sum+=n%10; n/=10; }
+    printf("Sum=%d",sum);
+}
+
+// Program 24: Reverse digits of a number
+void prog24() {
+    int n,rev=0; printf("Enter n: "); scanf("%d",&n);
+    while(n>0) { rev=rev*10+(n%10); n/=10; }
+    printf("Reverse=%d",rev);
+}
+
+// Program 25: Check palindrome number
+void prog25() {
+    int n,rev=0,temp; printf("Enter n: "); scanf("%d",&n);
+    temp=n;
+    while(n>0) { rev=rev*10+(n%10); n/=10; }
+    if(temp==rev) printf("Palindrome");
+    else printf("Not Palindrome");
+}
+
+// Program 26: Check Armstrong number
+void prog26() {
+    int n,temp,sum=0; printf("Enter n: "); scanf("%d",&n);
+    temp=n;
+    while(temp>0) {
+        int d=temp%10;
+        sum+=d*d*d;
+        temp/=10;
+    }
+    if(sum==n) printf("Armstrong");
+    else printf("Not Armstrong");
+}
+
+// Program 27: Find factors of a number
+void prog27() {
+    int n; printf("Enter n: "); scanf("%d",&n);
+    for(int i=1;i<=n;i++) if(n%i==0) printf("%d ",i);
+}
+
+// Program 28: Check perfect number
+void prog28() {
+    int n,sum=0; printf("Enter n: "); scanf("%d",&n);
+    for(int i=1;i<n;i++) if(n%i==0) sum+=i;
+    if(sum==n) printf("Perfect");
+    else printf("Not Perfect");
+}
+
+// Program 29: Check prime number
+void prog29() {
+    int n,flag=1; printf("Enter n: "); scanf("%d",&n);
+    if(n<2) flag=0;
+    for(int i=2;i<=n/2;i++) if(n%i==0) { flag=0; break; }
+    if(flag) printf("Prime");
+    else printf("Not Prime");
+}
+
+// Program 30: Print all prime numbers between 1 and 500
+void prog30() {
+    for(int i=2;i<=500;i++) {
+        int flag=1;
+        for(int j=2;j<=i/2;j++) if(i%j==0) { flag=0; break; }
+        if(flag) printf("%d ",i);
+    }
+}
+
+int main() {
+    // Call whichever program you want to run
+    prog1();
+    return 0;
+}
